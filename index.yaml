@@ -1,0 +1,69 @@
+apiVersion: v1
+entries:
+  common:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-09-06T23:24:28.696983997Z"
+    description: Reusable Helm chart for a single waltid workload (issuer, verifier,
+      wallet-api, portal, ...)
+    digest: bd116e50fac9c7c0841e6f64b16461cae805edadf595a6e53ec924b3a5ba91ba
+    name: common
+    type: application
+    urls:
+    - https://github.com/waldofouche/waltid-identity/releases/download/common-0.1.0/common-0.1.0.tgz
+    version: 0.1.0
+  waltid:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2026-09-06T23:24:28.956713263Z"
+    dependencies:
+    - alias: issuer
+      name: common
+      repository: file://../common
+      version: 0.1.0
+    - alias: issuer2
+      name: common
+      repository: file://../common
+      version: 0.1.0
+    - alias: verifier
+      name: common
+      repository: file://../common
+      version: 0.1.0
+    - alias: verifier2
+      name: common
+      repository: file://../common
+      version: 0.1.0
+    - alias: wallet-api2
+      name: common
+      repository: file://../common
+      version: 0.1.0
+    - alias: portal
+      name: common
+      repository: file://../common
+      version: 0.1.0
+    - alias: portal2
+      name: common
+      repository: file://../common
+      version: 0.1.0
+    - name: web-wallet
+      repository: file://../web-wallet
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 483caa59866d66f584f7c4dc31b3a1a349c9f3184e33bc7846684bde0ababb07
+    name: waltid
+    type: application
+    urls:
+    - https://github.com/waldofouche/waltid-identity/releases/download/waltid-0.1.0/waltid-0.1.0.tgz
+    version: 0.1.0
+  web-wallet:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-09-06T23:24:29.281629525Z"
+    description: A Helm chart for Kubernetes
+    digest: 43300e6abb69baa06b15acf1f9b873a7b73a7c32a1b5984f741bcd1480469514
+    name: web-wallet
+    type: application
+    urls:
+    - https://github.com/waldofouche/waltid-identity/releases/download/web-wallet-0.1.0/web-wallet-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-09-06T23:24:29.281635626Z"
